@@ -1,6 +1,3 @@
-// if(process.env.NODE_ENV !==' production'){
-//     require('dotenv').config();
-// }
 
 const express = require('express');
 const app = express();
@@ -9,18 +6,10 @@ const seedDB = require('./seed');
 var cors = require('cors');
 const Users = require('./models/User');
 
+const authRoutes = require('./routes/authRoutes');
 
+const itemRoutes = require('./routes/itemRoutes');
 
-
-const authRoutes = require('./routes/apis/authRoutes');
-
-const itemRoutes = require('./routes/apis/itemRoutes');
-
-
-
-// const dbURL = process.env.dbURL;
-
-// mongoose.set('strictQuery',true);
 mongoose.connect('mongodb://127.0.0.1:27017/Lost-Found-Portal')
 .then(()=>{
     // console.log(`DB connected successfully ${mongoose.connection.host}`);

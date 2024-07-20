@@ -19,8 +19,7 @@ router.post('/register',async (req, res) => {
             username:user.username,
             email:user.email,
             password:user.password,
-            gender:user.gender,
-            profilePic:user.profilePic
+           
         })
         await dbUser.save(); 
        return res.status(200).json({msg:'account has been created'}); 

@@ -27,17 +27,17 @@ router.post('/additems',async(req,res)=>{
 })
 
 // 3rd route=> to show a paricular quote
-// router.get('/items/:id',async(req,res)=>{
-//     try{
-//         let {id} =req.params;
-//         const item = await Items.findById(id);
-//         // console.log(quote);
-//         res.status(200).json(item);
-//     }
-//     catch(e){
-//         res.status(400).json({msg:'something went wrong'});
-//     }
-// })
+router.get('/items/:id',async(req,res)=>{
+    try{
+        let {id} =req.params;
+        const item = await Items.findById(id);
+        // console.log(quote);
+        res.status(200).json(item);
+    }
+    catch(e){
+        res.status(400).json({msg:'something went wrong'});
+    }
+})
 
 // 4th route=> show the form to edit the quote(particular quote)
 
