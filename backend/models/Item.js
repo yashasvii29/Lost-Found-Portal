@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const Review = require('./Review');
+
 const itemSchema = new mongoose.Schema({
     name:{
         type:String,

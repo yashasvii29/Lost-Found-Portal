@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express();
 const bcrypt = require('bcrypt');
-const User  = require('../../models/User');
-const generateAuthToken = require('../../jwtTokenGenerator');
+// const User  = require('../../models/User');
+const User = require('../models/User');
+const generateAuthToken = require('.././jwtTokenGenerator');
 // signup
 router.post('/register',async (req, res) => {
     try{

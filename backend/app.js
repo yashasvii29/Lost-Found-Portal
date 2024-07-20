@@ -4,11 +4,12 @@ const app = express();
 const mongoose = require('mongoose');
 const seedDB = require('./seed');
 var cors = require('cors');
-const Users = require('./models/User');
+// const Users = require('./models/User');
 
 const authRoutes = require('./routes/authRoutes');
 
 const itemRoutes = require('./routes/itemRoutes');
+
 
 mongoose.connect('mongodb://127.0.0.1:27017/Lost-Found-Portal')
 .then(()=>{
