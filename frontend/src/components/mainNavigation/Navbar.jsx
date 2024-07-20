@@ -17,7 +17,7 @@ function Navbar() {
                 <Link to='/'>All Items</Link>
                 <Link to='/new'>post Item</Link>
                 <Link to='/login'>Login</Link>
-                <Link to='/register'>Register</Link>
+                {/* <Link to='/register'>Register</Link> */}
 
             </ul>
         </nav>
