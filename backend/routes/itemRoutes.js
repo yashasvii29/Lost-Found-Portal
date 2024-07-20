@@ -16,8 +16,9 @@ router.get('/allitems', async(req,res)=>{
 // 2nd route=> to add a new quote 
 router.post('/additems',async(req,res)=>{
     try{
-        let {name,image,desc,type,userItem} = req.body;
-    await Items.create({name,image,desc,type,userItem});
+        let {name,image,desc,type} = req.body;
+        console.log(req.body);
+    await Items.create({name,image,desc,type});
     res.status(201).json({msg:"new item created successfully"});
     }
     catch(e){
